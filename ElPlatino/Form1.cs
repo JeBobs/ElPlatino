@@ -21,7 +21,6 @@ namespace ElPlatino
         public int initialized = 0;
         //TODO: insert custom font implementation here
         public Form1()
-
         {
             InitializeComponent();
             edVersionLabel.Text = "Local version not found!";
@@ -29,9 +28,9 @@ namespace ElPlatino
             statusLabel.Text = labelstatus;
             mainProgress.Visible = false;
             //TODO: insert server check here
-            //TODO: Insert local version checking here
+            //TODO: Insert better local version checking here
             var versionInfo = FileVersionInfo.GetVersionInfo("mtndew.dll");
-            string eldewritoProdVersion = versionInfo.ProductVersion; //creastes string for eldewrito version, using the version of mtndew
+            string eldewritoProdVersion = versionInfo.ProductVersion; //creates string for eldewrito version, using the product version of mtndew
             string eldewritoFileVersion = versionInfo.FileVersion;
             if (eldewritoFileVersion != eldewritoProdVersion)
             {
@@ -41,7 +40,7 @@ namespace ElPlatino
             {
                 edVersionLabel.Text = "Current Version: " + eldewritoProdVersion;
             }
-            if ((mainProgress.Visible == false) && (labelstatus != "Program Uninitialized!")) //runs a check to see if program is actually initialized
+            if ((mainProgress.Visible == false) && (labelstatus != "Program Uninitialized!") && (edVersionLabel.Text != "Error verifying ElDewrito version! Code 7")) //runs a check to see if program is actually initialized
             {
                 initialized = 1;
             }
