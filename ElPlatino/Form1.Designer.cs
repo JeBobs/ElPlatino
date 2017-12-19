@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.statusLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.edVersionLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.mainProgress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
@@ -46,14 +46,14 @@
             this.statusLabel.Text = "Program Uninitalized!";
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // edVersionLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Local version not found!";
+            this.edVersionLabel.AutoSize = true;
+            this.edVersionLabel.Location = new System.Drawing.Point(104, 33);
+            this.edVersionLabel.Name = "edVersionLabel";
+            this.edVersionLabel.Size = new System.Drawing.Size(121, 13);
+            this.edVersionLabel.TabIndex = 1;
+            this.edVersionLabel.Text = "Local version not found!";
             // 
             // button1
             // 
@@ -81,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(320, 95);
             this.Controls.Add(this.mainProgress);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.edVersionLabel);
             this.Controls.Add(this.statusLabel);
             this.Name = "Form1";
             this.Text = "ElPlatino Updater";
@@ -93,7 +93,7 @@
         #endregion
 
         private System.Windows.Forms.Label statusLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label edVersionLabel;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ProgressBar mainProgress;
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -23,11 +24,15 @@ namespace ElPlatino
 
         {
             InitializeComponent();
+            edVersionLabel.Text = "Local version not found!";
             labelstatus = "Click 'Check for updates' to check for updates.";
             statusLabel.Text = labelstatus;
             mainProgress.Visible = false;
             //TODO: insert server check here
             //TODO: Insert local version checking here
+            var versionInfo = FileVersionInfo.GetVersionInfo("mtndew.dll");
+            string eldewritoVersion = versionInfo.ProductVersion; //creastes string for eldewrito version, using the version of mtndew
+            edVersionLabel.Text = "Current Version: " + eldewritoVersion;
             if ((mainProgress.Visible == false) && (labelstatus != "Program Uninitialized!")) //runs a check to see if program is actually initialized
             {
                 initialized = 1;
