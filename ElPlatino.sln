@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElPlatino", "ElPlatino\ElPlatino.csproj", "{F89C6CAB-EADD-4E66-9E98-7B94A1BC1C98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatinoUpdate", "PlatinoUpdate\PlatinoUpdate.csproj", "{E5632F09-7D4E-4961-A320-B8DF5877773C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F89C6CAB-EADD-4E66-9E98-7B94A1BC1C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89C6CAB-EADD-4E66-9E98-7B94A1BC1C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89C6CAB-EADD-4E66-9E98-7B94A1BC1C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5632F09-7D4E-4961-A320-B8DF5877773C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5632F09-7D4E-4961-A320-B8DF5877773C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5632F09-7D4E-4961-A320-B8DF5877773C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5632F09-7D4E-4961-A320-B8DF5877773C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
