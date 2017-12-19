@@ -23,7 +23,6 @@ namespace ElPlatino
 
         {
             InitializeComponent();
-            statusLabel.Font = new Font(pfc.Families[0], 18, FontStyle.Regular);
             labelstatus = "Click 'Check for updates' to check for updates.";
             statusLabel.Text = labelstatus;
             mainProgress.Visible = false;
