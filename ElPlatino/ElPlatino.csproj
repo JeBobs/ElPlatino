@@ -65,7 +65,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Content Include="ConduitITCStd-Medium.ttf" />
     <None Include="platino.cfg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,6 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlatinoPassoff\PlatinoPassoff.csproj">
+      <Project>{e03387f1-16e9-4dfa-9c75-020131008489}</Project>
+      <Name>PlatinoPassoff</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlatinoUpdate\PlatinoUpdate.csproj">
+      <Project>{e5632f09-7d4e-4961-a320-b8df5877773c}</Project>
+      <Name>PlatinoUpdate</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

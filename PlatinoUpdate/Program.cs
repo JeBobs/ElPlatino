@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ElPlatino;
 using System.Xml;
-using System.Windows.Forms;
 
 namespace PlatinoUpdate
 {
@@ -25,11 +20,11 @@ namespace PlatinoUpdate
                 reader = new XmlTextReader(xmlUrl);
                 reader.MoveToContent();
                 string elementName = "";
-                if ((reader.NodeType == XmlNodeType.Element) && (reader.Name = "elplatino"))
+                if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "elplatino"))
                 {
                     while (reader.Read())
                     {
-                        if (reader.NodeType = XmlNodeType.Element)
+                        if (reader.NodeType == XmlNodeType.Element)
                         {
                             elementName = reader.Name;
                         }
@@ -53,7 +48,7 @@ namespace PlatinoUpdate
             }
             catch (Exception ex)
             {
-                Form1.labelstatus = "Error in PlatinoUpdate!";
+                PlatinoPassoff.PublicVars.labelstatus = "Error in PlatinoUpdate!";
                 Environment.Exit(1);
             }
             finally
@@ -64,7 +59,7 @@ namespace PlatinoUpdate
             Version eldewritoVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             if(eldewritoVersion.CompareTo(newVersion) < 0)
             {
-                Form1.labelstatus = "Version " + newVersion.Major + "." + newVersion.Minor + "." + newVersion.Build + " found - updating game.";
+                PlatinoPassoff.PublicVars.labelstatus = "Version " + newVersion.Major + "." + newVersion.Minor + "." + newVersion.Build + " found - updating game.";
                 System.Diagnostics.Process.Start(downloadUrl);
             }
         }
