@@ -31,8 +31,16 @@ namespace ElPlatino
             //TODO: insert server check here
             //TODO: Insert local version checking here
             var versionInfo = FileVersionInfo.GetVersionInfo("mtndew.dll");
-            string eldewritoVersion = versionInfo.ProductVersion; //creastes string for eldewrito version, using the version of mtndew
-            edVersionLabel.Text = "Current Version: " + eldewritoVersion;
+            string eldewritoProdVersion = versionInfo.ProductVersion; //creastes string for eldewrito version, using the version of mtndew
+            string eldewritoFileVersion = versionInfo.FileVersion;
+            if (eldewritoFileVersion != eldewritoProdVersion)
+            {
+                edVersionLabel.Text = "Error verifying ElDewrito version! Code 7";
+            }
+            else
+            {
+                edVersionLabel.Text = "Current Version: " + eldewritoProdVersion;
+            }
             if ((mainProgress.Visible == false) && (labelstatus != "Program Uninitialized!")) //runs a check to see if program is actually initialized
             {
                 initialized = 1;
